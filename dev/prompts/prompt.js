@@ -1,4 +1,4 @@
-const fs = require('fs')
+
 const inquirer = require('inquirer');
 //WHEN I start the application 
 //THEN I am prompted to enter the team manager’s name, CHECK employee ID, CHECK email address, office number
@@ -34,10 +34,13 @@ function managerPrompts() {
         },
       ])
       .then((data) => 
-      {
-        console.log(data)
+      {console.log(data)
+        const menu = require("./menu")
+        menu()
+
+        
         //we might neeed this soon idk
       })
 }
 
-module.exports = managerPrompts()
+module.exports = managerPrompts;

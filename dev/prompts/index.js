@@ -1,5 +1,10 @@
+
+// const menu = require("./menu")
 const managerPrompts = require("./prompt")
-managerPrompts
+
+managerPrompts()
+
+
 
 // GIVEN a command-line application that accepts user input
 
