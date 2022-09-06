@@ -1,4 +1,4 @@
-
+const fs = require('fs')
 const inquirer = require('inquirer');
 //WHEN I start the application 
 //THEN I am prompted to enter the team manager’s name, CHECK employee ID, CHECK email address, office number
@@ -12,34 +12,58 @@ function managerPrompts() {
           //team managers name
           type: 'input',
           message: `please enter your team manager name`,
-          name: 'manager-name'
+          name: 'name'
         },
         {
             //employee ID 
             type: 'input',
             message: `please enter your employee ID`,
-            name: 'manager-emp-ID'
+            name: 'ID'
         },
         {
             //manager email
             type: 'input',
             message: `please enter your email address`,
-            name: 'manager-email'
+            name: 'email'
         },
         {
             //office number
             type: 'input',
             message: `please enter your office number`,
-            name: 'manager-office-num'
+            name: 'office'
         },
       ])
       .then((data) => 
-      {console.log(data)
+      {
+        //this is writing the html file
+        //boiler plate
+        let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
+
+        line(`<!DOCTYPE html>`)
+        line(`<html lang="en">`)
+        line(`<head>`)
+        line( `   <meta charset="UTF-8">`)
+        line( `   <meta http-equiv="X-UA-Compatible" content="IE=edge">`)
+        line( `   <meta name="viewport" content="width=device-width, initial-scale=1.0">`)
+        line( `   <title>The Manager's Manager</title>`)
+        line(`</head>`) 
+        line(`<body>`)
+        //adds manager inforamation
+        line(`<div>`)
+        line(`  <h2>Manager</h2>`)
+        line(`  <h3>${data.name}</h3>`)
+        line(`  <p>employee ID: ${data.ID}</p>`)
+        line(`  <a href="mailto:${data.email}">${data.email}</a>`)
+        line(`  <p>office number: ${data.office}</p>`)
+        line(`</div>`)
+
+        
+
         const menu = require("./menu")
         menu()
 
         
-        //we might neeed this soon idk
+       
       })
 }
 

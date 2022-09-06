@@ -1,8 +1,5 @@
 const inquirer = require('inquirer');
-//WHEN I start the application 
-//THEN I am prompted to enter the team engineer’s name, CHECK employee ID, CHECK email address, office number
-// use inquirer to write these prompts maybe put the prompts inside there own js file.
-
+const fs = require('fs')
 function engineerPrompts() {
 
 
@@ -10,31 +7,46 @@ function engineerPrompts() {
         {
           //engineer's name
           type: 'input',
-          message: `please enter engineers team engineer name`,
-          name: 'engineer-name'
+          message: `please enter engineer name`,
+          name: 'engineerName'
         },
         {
             //employee ID 
             type: 'input',
             message: `please enter engineers employee ID`,
-            name: 'engineer-emp-ID'
+            name: 'engineerID'
         },
         {
             //engineer email
             type: 'input',
             message: `please enter engineers email address`,
-            name: 'engineer-email'
+            name: 'engineerEmail'
         },
         {
             //office number
             type: 'input',
-            message: `please enter engineers office number`,
-            name: 'engineer-office-num'
+            message: `please enter engineers Github username`,
+            name: 'GitHub'
         },
       ])
       .then((data) => 
-      {console.log(data)
+      {
+        let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
+
+        //adds engineer inforamation
+        line(`<div>`)
+        line(`  <h2>engineer</h2>`)
+        line(`  <h3>${data.engineerName}</h3>`)
+        line(`  <p>employee ID: ${data.engineerID}</p>`)
+        line(`  <a href="mailto:${data.engineerEmail}">${data.engineerEmail}</a>`)
+        line(`  <p>GitHub: ${data.GitHub}</p>`)
+        line(`</div>`)
+
+        // line(``)
+
+
         const menu = require("./menu")
+        
         menu()
 
       })

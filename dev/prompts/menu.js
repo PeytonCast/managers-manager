@@ -2,7 +2,7 @@
 //TODO create a few functions that will run another set of prompts for the intern and engineer based off of menu prompts input
 //then return to menu prompts repeat this until finished building is selected
 const inquirer = require('inquirer');
-
+const fs = require('fs')
 function menu() {
 inquirer.prompt([
     {
@@ -20,21 +20,24 @@ inquirer.prompt([
   ])
   .then((data) => 
   {
-    console.log(data)
+    
     if(data.menu == 'engineer'){
-        console.log('run engineer')
         const engineer = require('./engineer')
         engineer()
           }
     if(data.menu == "intern") {
-        console.log('run intern')
-       //this will be a function
-
+        const intern = require('./intern')
+        intern()
     }
     if(data.menu == "finished building"){
-        console.log("run finished")
-      //this will be a function
+        console.log("finished")
+        let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
 
+        //adds engineer inforamation
+        line(`</body>`)
+        line(`</html>`)
+        process.exit(0)
+        
     }
     
   })
