@@ -34,16 +34,15 @@ function engineerPrompts() {
         let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
 
         //adds engineer inforamation
-        line(`<div>`)
-        line(`  <h2>engineer</h2>`)
+        line(`<div class="card">`)
+        line(`  <header>Engineer</header>`)
         line(`  <h3>${data.engineerName}</h3>`)
         line(`  <p>employee ID: ${data.engineerID}</p>`)
-        line(`  <a href="mailto:${data.engineerEmail}">${data.engineerEmail}</a>`)
-        line(`  <p>GitHub: ${data.GitHub}</p>`)
+        line(`  <a href="mailto:${data.engineerEmail}">${data.engineerEmail}</a> <br> <br>`)
+        line(`  <a href="https://github.com/${data.GitHub}">${data.GitHub}</a>`)
         line(`</div>`)
 
-        // line(``)
-
+        // line(``) 
 
         const menu = require("./menu")
         

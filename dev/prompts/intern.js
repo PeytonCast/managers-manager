@@ -34,8 +34,8 @@ function internsPrompts() {
         let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
 
         //adds engineer inforamation
-        line(`<div>`)
-        line(`  <h2>intern</h2>`)
+        line(`<div class="card">`)
+        line(`  <header>Intern</header>`)
         line(`  <h3>${data.internsName}</h3>`)
         line(`  <p>employee ID: ${data.internsID}</p>`)
         line(`  <a href="mailto:${data.internsEmail}">${data.internsEmail}</a>`)

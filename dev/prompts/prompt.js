@@ -44,13 +44,15 @@ function managerPrompts() {
         line(`<head>`)
         line( `   <meta charset="UTF-8">`)
         line( `   <meta http-equiv="X-UA-Compatible" content="IE=edge">`)
-        line( `   <meta name="viewport" content="width=device-width, initial-scale=1.0">`)
-        line( `   <title>The Manager's Manager</title>`)
+        line( `   <meta name="viewport" content="width=device-width, initial-scale=1.0">`)// 
+        line( `   <link rel="stylesheet" href="style.css">`)
+        line( `   <title>Manager</title>`)
         line(`</head>`) 
-        line(`<body>`)
+        
+        line(`<body class="box">`)
         //adds manager inforamation
-        line(`<div>`)
-        line(`  <h2>Manager</h2>`)
+        line(`<div class="card">`)
+        line(`  <header>Manager</header>`)
         line(`  <h3>${data.name}</h3>`)
         line(`  <p>employee ID: ${data.ID}</p>`)
         line(`  <a href="mailto:${data.email}">${data.email}</a>`)
