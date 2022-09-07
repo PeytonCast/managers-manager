@@ -23,7 +23,7 @@ function engineerPrompts() {
             name: 'engineerEmail'
         },
         {
-            //office number
+            //GitHub
             type: 'input',
             message: `please enter engineers Github username`,
             name: 'GitHub'

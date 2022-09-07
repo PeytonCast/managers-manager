@@ -1,6 +1,5 @@
 //this is the menu prompts it will run after managerPrompt() runs
-//TODO create a few functions that will run another set of prompts for the intern and engineer based off of menu prompts input
-//then return to menu prompts repeat this until finished building is selected
+
 const inquirer = require('inquirer');
 const fs = require('fs')
 function menu() {

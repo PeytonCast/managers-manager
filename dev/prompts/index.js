@@ -1,6 +1,6 @@
 
 // const menu = require("./menu")
-const managerPrompts = require("./prompt")
+const managerPrompts = require("./manager")
 
 managerPrompts()
 
@@ -20,7 +20,7 @@ managerPrompts()
 // THEN my default email program opens and populates the TO field of the email with the address
 // i will need to figure out how to open email using an email link click
 
-//TODO
+//done
 // WHEN I click on the GitHub username
 // THEN that GitHub profile opens in a new tab
 // this will be a link wher i can just github/${pass in a user name}.com
