@@ -29,7 +29,7 @@
  
    <!--TESTS-->
    ### [Testing Instructions](tests)
-    To test if the tool is operating properly open vs code terminal and run "node index.js" it should immediately start asking you questions.
+   To test if the tool is operating properly open vs code terminal and run "node index.js" it should immediately start asking you questions.
  
    <!--QUESTIONS-->
    ### [Questions](questions)
