@@ -31,6 +31,7 @@
    <!--TESTS-->
    ### [Testing Instructions](tests)
    To test if the tool is operating properly open vs code terminal and run "node index.js" it should immediately start asking you questions.
+   
    ![image](https://user-images.githubusercontent.com/107663364/188933896-05f6879a-df10-4547-9379-246944947688.png)
 
  
