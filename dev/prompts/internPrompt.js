@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const Intern = require('../classes/intern')
 const fs = require('fs')
 function internsPrompts() {
 
@@ -30,16 +31,17 @@ function internsPrompts() {
         },
       ])
       .then((data) => 
-      {
+      { const intern = new Intern(data.internsName, data.internsID, data.internsEmail, data.School)
+        
         let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
 
         //adds engineer inforamation
         line(`<div class="card">`)
         line(`  <header>Intern</header>`)
-        line(`  <h3>${data.internsName}</h3>`)
-        line(`  <p>employee ID: ${data.internsID}</p>`)
-        line(`  <a href="mailto:${data.internsEmail}">${data.internsEmail}</a>`)
-        line(`  <p>school: ${data.School}</p>`)
+        line(`  <h3>${intern.name}</h3>`)
+        line(`  <p>employee ID: ${intern.id}</p>`)
+        line(`  <a href="mailto:${intern.email}">${intern.email}</a>`)
+        line(`  <p>school: ${intern.school}</p>`)
         line(`</div>`)
 
         // line(``)

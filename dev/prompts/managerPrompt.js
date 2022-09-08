@@ -1,7 +1,6 @@
 const fs = require('fs')
 const Manager = require('../classes/manager')
-//export manager
-//
+
 const inquirer = require('inquirer');
 //WHEN I start the application 
 //THEN I am prompted to enter the team manager’s name, CHECK employee ID, CHECK email address, office number
@@ -37,7 +36,9 @@ function managerPrompts() {
         },
       ])//manager
       .then((data) => 
-      { const manager = new Manager(data.name, data.ID, data)
+      //using classes to make an object even tho inquirer returns an object but its required in the readme 
+      { const manager = new Manager(data.name, data.ID, data.email, data.office)
+        
         //this is writing the html file
         //boiler plate
         let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
@@ -59,7 +60,7 @@ function managerPrompts() {
         line(`  <h3>${manager.name}</h3>`)
         line(`  <p>employee ID: ${manager.ID}</p>`)
         line(`  <a href="mailto:${manager.email}">${manager.email}</a>`)
-        line(`  <p>office number: ${manager.office}</p>`)
+        line(`  <p>office number: ${manager.officeNumber}</p>`)
         line(`</div>`)
 
         

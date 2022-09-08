@@ -11,5 +11,7 @@ class Employee {
 }
 // const manager = new Employee('Peyton', '2', 'email')
 // console.log(manager)
+const test = new Employee()
+
 module.exports = test
 module.exports = Employee

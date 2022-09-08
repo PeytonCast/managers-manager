@@ -15,6 +15,6 @@ class Manager extends Employee{
 
 }
 const test = new Manager()
-console.log(test)
+
 module.exports = test
 module.exports = Manager

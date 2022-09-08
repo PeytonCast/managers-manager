@@ -15,6 +15,6 @@ class Intern extends Employee{
 
 }
 const test = new Intern()
-console.log(test)
+
 module.exports = test
 module.exports = Intern

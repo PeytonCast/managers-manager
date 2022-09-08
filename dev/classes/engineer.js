@@ -16,6 +16,6 @@ class Engineer extends Employee{
 
 }
 const test = new Engineer()
-console.log(test)
+
 module.exports = test
 module.exports = Engineer
