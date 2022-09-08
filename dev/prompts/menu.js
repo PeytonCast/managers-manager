@@ -21,11 +21,11 @@ inquirer.prompt([
   {
     
     if(data.menu == 'engineer'){
-        const engineer = require('./engineer')
+        const engineer = require('./engineerPrompt')
         engineer()
           }
     if(data.menu == "intern") {
-        const intern = require('./intern')
+        const intern = require('./internPrompt')
         intern()
     }
     if(data.menu == "finished building"){

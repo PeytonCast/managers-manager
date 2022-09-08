@@ -1,4 +1,7 @@
 const fs = require('fs')
+const Manager = require('../classes/manager')
+//export manager
+//
 const inquirer = require('inquirer');
 //WHEN I start the application 
 //THEN I am prompted to enter the team manager’s name, CHECK employee ID, CHECK email address, office number
@@ -32,9 +35,9 @@ function managerPrompts() {
             message: `please enter your office number`,
             name: 'office'
         },
-      ])
+      ])//manager
       .then((data) => 
-      {
+      { const manager = new Manager(data.name, data.ID, data)
         //this is writing the html file
         //boiler plate
         let line = (write) => fs.appendFileSync('index.html', `\n${write}`);
@@ -53,10 +56,10 @@ function managerPrompts() {
         //adds manager inforamation
         line(`<div class="card">`)
         line(`  <header>Manager</header>`)
-        line(`  <h3>${data.name}</h3>`)
-        line(`  <p>employee ID: ${data.ID}</p>`)
-        line(`  <a href="mailto:${data.email}">${data.email}</a>`)
-        line(`  <p>office number: ${data.office}</p>`)
+        line(`  <h3>${manager.name}</h3>`)
+        line(`  <p>employee ID: ${manager.ID}</p>`)
+        line(`  <a href="mailto:${manager.email}">${manager.email}</a>`)
+        line(`  <p>office number: ${manager.office}</p>`)
         line(`</div>`)
 
         

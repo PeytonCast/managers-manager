@@ -1,6 +1,6 @@
-
+//inits prompts
 // const menu = require("./menu")
-const managerPrompts = require("./manager")
+const managerPrompts = require("./managerPrompt")
 
 managerPrompts()
 
