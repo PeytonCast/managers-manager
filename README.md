@@ -4,7 +4,7 @@
   
   Description: <br>
   This is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
- 
+   <br>[Preview](https://peytoncast.github.io/managers-manager/dev/example.html)<br>
   <!--TABLE OF CONTENTS-->
    ## Table of Contents
   1. [Installation](#install)
