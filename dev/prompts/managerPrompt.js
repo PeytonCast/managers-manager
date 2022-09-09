@@ -58,7 +58,7 @@ function managerPrompts() {
         line(`<div class="card">`)
         line(`  <header>Manager</header>`)
         line(`  <h3>${manager.name}</h3>`)
-        line(`  <p>employee ID: ${manager.ID}</p>`)
+        line(`  <p>employee ID: ${manager.id}</p>`)
         line(`  <a href="mailto:${manager.email}">${manager.email}</a>`)
         line(`  <p>office number: ${manager.officeNumber}</p>`)
         line(`</div>`)
